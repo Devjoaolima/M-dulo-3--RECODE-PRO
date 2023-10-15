@@ -1,3 +1,0 @@
-Connection
-Connection$ConexaoSQLServer
-ConexaoSQLServer
