@@ -3,7 +3,7 @@ CREATE DATABASE AgenciaViagem;
 USE AgenciaViagem;
 
 CREATE TABLE Cliente (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Id INT AUTO_INCREMENT PRIMARY KEY,
     Cpf VARCHAR(20) UNIQUE,
     Idade INT,
     Email NVARCHAR(255),
@@ -12,14 +12,14 @@ CREATE TABLE Cliente (
 );
 
 CREATE TABLE Viagem (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Id INT AUTO_INCREMENT PRIMARY KEY,
     Preco FLOAT,
     Taxas FLOAT,
     Destino NVARCHAR(255)
 );
 
 CREATE TABLE Passagem (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Id INT AUTO_INCREMENT PRIMARY KEY,
     Viagemid INT,
     Usuarioid INT,
     FOREIGN KEY (Usuarioid) REFERENCES Cliente(Id),
