@@ -1,4 +1,3 @@
-package connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,8 +5,8 @@ import java.sql.SQLException;
 public class ConexaoMySQL {
     public static Connection conectar() {
         String url = "jdbc:mysql://localhost:3306/AgenciaViagem";
-        String usuario = "seuUsuario";
-        String senha = "suaSenha";
+        String usuario = "sa";
+        String senha = "123456";
 
         try {
             Connection conexao = DriverManager.getConnection(url, usuario, senha);
@@ -30,3 +29,5 @@ public class ConexaoMySQL {
         }
     }
 }
+
+
